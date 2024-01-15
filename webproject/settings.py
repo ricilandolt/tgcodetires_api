@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +28,10 @@ SERVER_TYPE = os.environ.get('SERVER_TYPE','dev')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['tgtires-api-88167eb20fba.herokuapp.com']
+if SERVER_TYPE != 'prod':
+    ALLOWED_HOSTS += ['localhost']
+
 
 
 # Application definition
@@ -104,6 +108,10 @@ DATABASES = {
         'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
     }
 }
+
+if SERVER_TYPE == 'prod':
+    DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require =True)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
