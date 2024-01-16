@@ -30,11 +30,11 @@ DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = ['tgtires-api-88167eb20fba.herokuapp.com']
 if SERVER_TYPE != 'prod':
-    ALLOWED_HOSTS += ['localhost']
+    ALLOWED_HOSTS += ['127.0.0.1']
 
 CORS_ALLOWED_ORIGINS = ['https://master--dynamic-mooncake-268f72.netlify.app']
  
-if SERVER_TYPE != 'prod':
+if SERVER_TYPE == 'prod':
     CORS_ALLOWED_ORIGINS += ['http://127.0.0.1:5173']
 
 # Application definition
