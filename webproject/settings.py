@@ -32,7 +32,10 @@ ALLOWED_HOSTS = ['tgtires-api-88167eb20fba.herokuapp.com']
 if SERVER_TYPE != 'prod':
     ALLOWED_HOSTS += ['localhost']
 
-
+CORS_ALLOWED_ORIGINS = ['https://master--dynamic-mooncake-268f72.netlify.app']
+ 
+if SERVER_TYPE != 'prod':
+    CORS_ALLOWED_ORIGINS += ['http://localhost:5173']
 
 # Application definition
 
@@ -47,6 +50,7 @@ INSTALLED_APPS = [
     #third party apps
     'rest_framework',
     'drf_yasg',
+    'corsheaders',
 
     # my apps 
     'rim',
@@ -58,6 +62,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
