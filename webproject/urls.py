@@ -25,12 +25,10 @@ from webproject import settings
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="Django API",
+      title="TG-Tire API",
       default_version='v1',
-      description="Description of your Django App",
-      terms_of_service="https://www.google.com/policies/terms/",
-      contact=openapi.Contact(email="academy@constructor.org"),
-      license=openapi.License(name="BSD License"),
+      description="Welcome to the TG-Tire API – your gateway to comprehensive vehicle data sourced from the Astra Federal Office of Switzerland. Our meticulously processed and standardized dataset allows you to seamlessly access information about tire and wheel dimensions for various vehicle models.",
+      contact=openapi.Contact(email="ricardo.landolt1@gmail.com"),
    ),
    public=True, # Set to False restrict access to protected endpoints
    permission_classes=(permissions.AllowAny,), # Permissions for docs access
