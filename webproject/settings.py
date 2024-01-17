@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['tgtires-api-88167eb20fba.herokuapp.com']
 if SERVER_TYPE != 'prod':
     ALLOWED_HOSTS += ['127.0.0.1']
 
-CORS_ALLOWED_ORIGINS = ['https://master--dynamic-mooncake-268f72.netlify.app']
+CORS_ALLOWED_ORIGINS = ['https://master--dynamic-mooncake-268f72.netlify.app', 'https://reifen-typenschein.ch']
  
 if SERVER_TYPE != 'prod':
     CORS_ALLOWED_ORIGINS += ['http://127.0.0.1:5173']
