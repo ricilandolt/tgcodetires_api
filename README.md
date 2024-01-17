@@ -1,7 +1,7 @@
 # tgcodetires_api
 
 ## Overview
-The Swiss Tyre Code API is a Django Rest Framework application designed to provide detailed information about tire sizes and rim specifications at the Swiss type code level. This API empowers users to find precisely matching rims and tires for their vehicles based on Swiss type codes.
+The [TG-Tire API](https://tgtires-api-88167eb20fba.herokuapp.com/docs/) is a Django Rest Framework application designed to provide detailed information about tire sizes and rim specifications at the Swiss type code level. This API empowers users to find precisely matching rims and tires for their vehicles based on Swiss type codes.
 
 <img width="586" alt="Screenshot 2024-01-17 215722" src="https://github.com/ricilandolt/tgcodetires_api/assets/103566118/f14f5b32-069c-4bd3-a7f3-f0e9938535c7">
 
