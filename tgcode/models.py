@@ -5,6 +5,6 @@ from rim.models import Rim
 class TgCode(models.Model):
     tgcode = models.CharField(max_length = 20, blank=False)
     tires = models.ManyToManyField(to=Tire)
-    rims = models.ManyToManyField(to=Rim)
+    rims = models.ManyToManyField(to=Rim, blank=True)
     def __str__(self):
         return f"TgCode: {self.tgcode} "
